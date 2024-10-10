@@ -10,9 +10,15 @@
 
 export function getAverage(array) {
   // Your code goes here...
+  let sum = 0;
+  let count = array.length;
+  for(let i = 0; i < array.length; i++){
+    sum += array[i]
+  }
+  return sum/count;
+  };
 
-}
-
+  getAverage([22,45,4,65]);
 
 /** 
  * PART 2
@@ -21,10 +27,19 @@ export function getAverage(array) {
  * Example2: getStringSum("GHIUJUHSG") => 0
  * */ 
 
-export function getStringSum(str) {
+export function getStringSum(str){
   // Your code goes here...
-
+  let total = 0;
+  for(let i = 0; i < str.length; i++){
+    if(str.charAt(i) < Infinity){
+     total += parseInt(str[i])
+    } else continue
+  }
+  return total;
 }
+
+getStringSum('GH2U87A');
+getStringSum('GHIUJUHSG');
 
 
 // === TEST YOURSELF ===

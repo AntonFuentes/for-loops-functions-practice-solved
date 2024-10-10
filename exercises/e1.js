@@ -5,9 +5,14 @@
 
 export function getFirstTenNumbers() {
   // Your code goes here...
+  let array = [];
+  for(let i = 1; i < 11; i++){
+    array.push(i)
+  }
 
-}
-
+    return array
+};
+getFirstTenNumbers();
 // === TEST YOURSELF ===
 // Once you're finished run the test with "npm run test-1"
 // If the test has all tests passed, switch to the next exercise file

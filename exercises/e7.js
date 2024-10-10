@@ -4,9 +4,17 @@
 // Array example: bankAccounts in /data/data.js
 // getClientWithLeastBalance(bankAccounts) => [{ name: 'SomeName', balance: 32, ... }]
 
+// import { ar } from "vitest/dist/chunks/reporters.WnPwkmgA.js";
 export function getClientWithLeastPositiveBalance(array) {
   // Your code goes here...
-  
+  let arr = [];
+  let lowest = array[0].balance;
+  for(let i = 0; i < array.length; i++){
+    if(array[i].balance > 0 && array[i].balance < lowest) {
+      arr.push(array[i]);
+    }
+  }
+  return arr;
 }
 
 // === TEST YOURSELF ===
