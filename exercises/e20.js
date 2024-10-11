@@ -9,13 +9,24 @@ export function separateNamesWithAFromRest(array) {
   // Your code goes here...
   let arrWithA = [];
   let arrNoA = [];
+  let arr = [arrWithA, arrNoA];
+
   for(let i in array){
-    for(let n in array[i])
-    if(array[i][n] === a ){
-      arrNoA.push(array[i]);
-    } else {arrWithA.push(array[i]);}
+    for(let n in array[i]){
+      if(array[i][n] === "a" || array[i][n] === "A"){
+          arrWithA.push(array[i]);
+        }
   }
-  return arrNoA + arrWithA;
+  arrNoA.push(array[i])
+  for(let x in arrWithA){
+    for(let c in arrNoA){
+      if(arrWithA[x] === arrNoA[c]){
+        arrNoA.pop(arrNoA[c]);
+      }
+    }
+  }
+}
+  return arr;
 }
 
 

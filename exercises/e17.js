@@ -8,12 +8,17 @@
 export function doesArrayInclude(array, value) {
   // Your code goes here...
   for(let i in array){
-    if (array[i] != value){
-      return false;
-    } else {return true;}
+    if(array[i]===value)
+      return true;
   }
-
+  for(let n in array){
+    if (array[n]!==value){
+      if(array[n]!==value)
+        return false;
+    }
+  }
 }
+
 
 
 
