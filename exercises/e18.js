@@ -7,9 +7,10 @@
 export function joinToString(array, separator) {
     let string = "";
     for(let i in array){
-        string += array[i] + separator;
+        string += array[i];
+        if(i < array.length-1)
+        string += separator;
     }
-    string = string.slice(0, -1);
     return string;
 }
 

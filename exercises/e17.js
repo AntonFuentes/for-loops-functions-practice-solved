@@ -11,13 +11,8 @@ export function doesArrayInclude(array, value) {
     if(array[i]===value)
       return true;
   }
-  for(let n in array){
-    if (array[n]!==value){
-      if(array[n]!==value)
         return false;
     }
-  }
-}
 
 
 
